@@ -11,7 +11,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.SwagLabsLoginPage;
-import pages.ZSwagLabsInventoryPage;
+import pages.SwagLabsInventoryPage;
 
 public class SwagLabsLoginStepDefinition extends TestActions  {
 
@@ -19,7 +19,7 @@ public class SwagLabsLoginStepDefinition extends TestActions  {
     DriverManager driverManager;
     public BaseActions pageActions;
     SwagLabsLoginPage swagLabsLoginPage;
-    ZSwagLabsInventoryPage zSwagLabsInventoryPage;
+    SwagLabsInventoryPage swagLabsInventoryPage;
 
     @Given("I am at the login page")
     public void iAmAtTheLoginPage() throws Exception {

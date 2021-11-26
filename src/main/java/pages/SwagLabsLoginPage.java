@@ -27,10 +27,10 @@ public class SwagLabsLoginPage extends BaseActions {
 
     }
 
-    public ZSwagLabsInventoryPage clickLogin(){
+    public SwagLabsInventoryPage clickLogin(){
 
         clickIt("SwagLabsLoginPage.tbx_btn_Submit");
-        return new ZSwagLabsInventoryPage(driver);
+        return new SwagLabsInventoryPage(driver);
 
     }
 

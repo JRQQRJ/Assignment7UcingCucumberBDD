@@ -3,10 +3,10 @@ package pages;
 import com.automationbytarun.components.BaseActions;
 import org.openqa.selenium.WebDriver;
 
-public class ZSwagLabsInventoryPage extends BaseActions {
+public class SwagLabsInventoryPage extends BaseActions {
     WebDriver driver;
 
-    public ZSwagLabsInventoryPage(WebDriver driver){
+    public SwagLabsInventoryPage(WebDriver driver){
         super(driver);
         this.driver=driver;
     }
@@ -16,7 +16,7 @@ public class ZSwagLabsInventoryPage extends BaseActions {
     }
 
 
-    public ZSwagLabsInventoryPage addSauceLabsBackpackToCart() throws InterruptedException {
+    public SwagLabsInventoryPage addSauceLabsBackpackToCart() throws InterruptedException {
         System.out.println("111");
         clickIt("SwagLabsInventoryPage.btn_addSauceLabsBackpackToCart");
         Thread.sleep(3000);
@@ -24,7 +24,7 @@ public class ZSwagLabsInventoryPage extends BaseActions {
         return this;
     }
 
-    public ZSwagLabsInventoryPage addSauceLabsFleeceJacketToCart() throws InterruptedException {
+    public SwagLabsInventoryPage addSauceLabsFleeceJacketToCart() throws InterruptedException {
         System.out.println("222");
         clickIt("SwagLabsInventoryPage.btn_addSauceLabsFleeceJacketToCart");
         System.out.println("212");

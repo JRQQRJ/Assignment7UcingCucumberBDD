@@ -1,10 +1,10 @@
 <suite name = "Smoke Suite" >
-    <test name =" OrangeCRMTests" preserve-order=" true">
+    <test name =" SwagLabs" preserve-order=" true">
         <classes>
-            <class name = "CucumberTemplate">
-                <include name = "validateLoginFunctionality"/>
-                <include name = "validateDashboardPage"/>
-            </class>
+            <class name = "CucumberTemplate"></class>
+            <class name = "stepDefinitions.SwagLabsInventoryStepDefinition"></class>
+            <class name = "stepDefinitions.SwagLabsLoginStepDefinition"></class>
         </classes>
     </test>
 </suite>
+
