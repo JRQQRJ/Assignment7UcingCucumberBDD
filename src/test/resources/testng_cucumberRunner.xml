@@ -1,0 +1,10 @@
+<suite name = "Smoke Suite" >
+    <test name =" OrangeCRMTests" preserve-order=" true">
+        <classes>
+            <class name = "CucumberTemplate">
+                <include name = "validateLoginFunctionality"/>
+                <include name = "validateDashboardPage"/>
+            </class>
+        </classes>
+    </test>
+</suite>
