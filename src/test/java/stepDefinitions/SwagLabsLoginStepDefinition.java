@@ -13,9 +13,11 @@ import org.testng.Assert;
 import pages.SwagLabsLoginPage;
 import pages.SwagLabsInventoryPage;
 
+import java.util.Objects;
+
 public class SwagLabsLoginStepDefinition extends TestActions  {
 
-    static WebDriver driver;
+    public static WebDriver driver;
     DriverManager driverManager;
     public BaseActions pageActions;
     SwagLabsLoginPage swagLabsLoginPage;
@@ -34,53 +36,19 @@ public class SwagLabsLoginStepDefinition extends TestActions  {
 
     }
 
-//    @When("I login to the application")
-//    public void iLoginToTheApplication() throws InterruptedException {
-//        loginPage.enterUserName("Admin")
-//                .enterPassword("admin123")
-//                .clickLogin();
-//        Thread.sleep(3000);
-//    }
 
     @When("I enter {string} and {string} and submit")
     public void iEnterAndAndSubmit(String arg0, String arg1) throws InterruptedException {
+
         swagLabsLoginPage.enterUserName(arg0);
-        System.out.println(arg0);
         swagLabsLoginPage.enterPassword(arg1);
-        System.out.println(arg1);
         swagLabsLoginPage.clickLogin();
         Thread.sleep(3000);
-        driver = driverManager.getDriver();
-        System.out.println(driver.getCurrentUrl());
-
 
     }
-
-    public WebDriver rD(){
-
-        System.out.println(driver.getCurrentUrl());
-        return driver;
-    }
-
-
-//    @Then("I should see the Welcome Page")
-//    public void iShouldSeeTheWelcomePage() throws InterruptedException {
-//        welcomePage = new WelcomePage(driver);
-//        String welcomMsg = welcomePage.getWelcomeMessage();
-//        System.out.println(welcomMsg);
-//        Thread.sleep(3000);
-////        TestAsserts
-////
-////        TestAsserts.checkIfValuesAreEqual(welcomMsg,welcomMsg);
-////        TestAsserts;
-//
-//    }
-
 
     @When("I enter {string} and {string} and try submit")
     public void iEnterAndAndTrySubmit(String arg0, String arg1) throws InterruptedException {
-        System.out.println(arg0);
-        System.out.println(arg1);
                 swagLabsLoginPage.enterUserName(arg0)
                 .enterPassword(arg1)
                 .clickLogin();
@@ -92,8 +60,44 @@ public class SwagLabsLoginStepDefinition extends TestActions  {
         Assert.assertTrue(driver.getCurrentUrl().contains("validate"));
     }
 
+//    @Then("I should see the Welcome Page")
+//    public void iShouldSeeTheWelcomePage() throws InterruptedException {
+//        SwagLabsLoginStepDefinition swagLabsLoginStepDefinition =new SwagLabsLoginStepDefinition();
+//        System.out.println(driver);
+//        pageActions = new BaseActions(driver);
+//        swagLabsInventoryPage = new SwagLabsInventoryPage(driver);
+//        String welcomMsg = swagLabsInventoryPage.getWelcomeMessage();
+//        System.out.println(welcomMsg);
+//        Thread.sleep(3000);
+//    }
+//
+//
+//    @Given("I am able to login")
+//    public void iAmAbleToLogin() throws InterruptedException {
+//        swagLabsInventoryPage = new SwagLabsInventoryPage(driver);
+//        String welcomMsg = swagLabsInventoryPage.getWelcomeMessage();
+//        System.out.println(welcomMsg);
+//        Thread.sleep(3000);
+//
+//    }
+//
+//    @When("I want add {string}  and {string}to cart")
+//    public void iWantAddAndToCart(String arg0, String arg1) throws InterruptedException {
+//        System.out.println("111111");
+//        if(Objects.equals(arg0, "SauceLabsBackpack")){
+//            swagLabsInventoryPage.addSauceLabsBackpackToCart();
+//            Thread.sleep(3000);}
+//        if(Objects.equals(arg1, "SauceLabsFleeceJacket")){
+//            System.out.println("222222");
+//            swagLabsInventoryPage.addSauceLabsFleeceJacketToCart();
+//        }
+//    }
+//
+//    @Then("Items must be added to cart")
+//    public void itemsMustBeAddedToCart() {
+//    }
 
-    }
+}
 
 
 

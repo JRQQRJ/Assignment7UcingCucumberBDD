@@ -2,8 +2,7 @@
     <test name =" SwagLabs" preserve-order=" true">
         <classes>
             <class name = "CucumberTemplate"></class>
-            <class name = "stepDefinitions.SwagLabsInventoryStepDefinition"></class>
-            <class name = "stepDefinitions.SwagLabsLoginStepDefinition"></class>
+<!--            <class name = "stepDefinitions.SwagLabsLoginStepDefinition"></class>-->
         </classes>
     </test>
 </suite>

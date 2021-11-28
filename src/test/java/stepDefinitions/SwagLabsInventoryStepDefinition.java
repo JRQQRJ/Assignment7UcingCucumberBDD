@@ -12,20 +12,15 @@ import java.util.Objects;
 
 public class SwagLabsInventoryStepDefinition extends TestActions {
 
-
-
-    WebDriver driver;
-    public BaseActions pageActions;
     SwagLabsInventoryPage swagLabsInventoryPage;
 
 
     @Then("I should see the Welcome Page")
     public void iShouldSeeTheWelcomePage() throws InterruptedException {
-        SwagLabsLoginStepDefinition swagLabsLoginStepDefinition =new SwagLabsLoginStepDefinition();
-        driver = swagLabsLoginStepDefinition.rD();
-        System.out.println(driver);
-        pageActions = new BaseActions(driver);
-        swagLabsInventoryPage = new SwagLabsInventoryPage(driver);
+        SwagLabsLoginStepDefinition swagLabsLoginStepDefinition = new SwagLabsLoginStepDefinition();
+        System.out.println(swagLabsLoginStepDefinition.driver);
+        System.out.println(driver.get()+"1");
+        swagLabsInventoryPage = new SwagLabsInventoryPage(swagLabsLoginStepDefinition.driver);
         String welcomMsg = swagLabsInventoryPage.getWelcomeMessage();
         System.out.println(welcomMsg);
         Thread.sleep(3000);
@@ -33,12 +28,20 @@ public class SwagLabsInventoryStepDefinition extends TestActions {
 
 
     @Given("I am able to login")
-    public void iAmAbleToLogin() {
+    public void iAmAbleToLogin() throws InterruptedException {
+        SwagLabsLoginStepDefinition swagLabsLoginStepDefinition = new SwagLabsLoginStepDefinition();
+        swagLabsInventoryPage = new SwagLabsInventoryPage(swagLabsLoginStepDefinition.driver);
+//        swagLabsInventoryPage = new SwagLabsInventoryPage(driver.get());
+        String welcomMsg = swagLabsInventoryPage.getWelcomeMessage();
+        System.out.println(welcomMsg);
+        Thread.sleep(3000);
 
     }
 
     @When("I want add {string}  and {string}to cart")
     public void iWantAddAndToCart(String arg0, String arg1) throws InterruptedException {
+        SwagLabsLoginStepDefinition swagLabsLoginStepDefinition = new SwagLabsLoginStepDefinition();
+        swagLabsInventoryPage = new SwagLabsInventoryPage(swagLabsLoginStepDefinition.driver);
         System.out.println("111111");
         if(Objects.equals(arg0, "SauceLabsBackpack")){
             swagLabsInventoryPage.addSauceLabsBackpackToCart();
@@ -52,8 +55,6 @@ public class SwagLabsInventoryStepDefinition extends TestActions {
     @Then("Items must be added to cart")
     public void itemsMustBeAddedToCart() {
     }
-
-
 
 }
 

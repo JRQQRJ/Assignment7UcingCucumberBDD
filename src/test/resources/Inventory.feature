@@ -1,18 +1,18 @@
-Feature:   Add to cart functionality
-  This feature validates add to cart functionality
-
-  @sanity
-  Scenario Outline: As a valid user, I want to add items to cart
-
-    Given I am able to login
-
-    When I want add "<item1>"  and "<item2>"to cart
-
-    Then Items must be added to cart
-    Examples:
-      |item1|item2|
-      |SauceLabsBackpack|SauceLabsFleeceJacket|
-
+#Feature:   Add to cart functionality
+#  This feature validates add to cart functionality
+#
+#  @sanity
+#  Scenario Outline: As a valid user, I want to add items to cart
+#
+#    Given I am able to login
+#
+#    When I want add "<item1>"  and "<item2>"to cart
+#
+#    Then Items must be added to cart
+#    Examples:
+#      |item1|item2|
+#      |SauceLabsBackpack|SauceLabsFleeceJacket|
+#
 
 
 
